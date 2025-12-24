@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Global UI polish to match reference style */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  }
+}
